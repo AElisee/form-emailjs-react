@@ -17,22 +17,22 @@ export const FormTemplate = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          // console.log(result.text);
           form.current.reset();
           formMess.innerHTML = "<p class = 'success'> Message envoyé !</> ";
 
           setTimeout(() => {
             formMess.innerHTML = "";
-          }, 2500);
+          }, 3000);
         },
         (error) => {
-          console.log(error.text);
+          // console.log(error.text);
           formMess.innerHTML =
             "<p class = 'error'> Une erreur s'est produite. Veuillez réessayer !</> ";
 
           setTimeout(() => {
             formMess.innerHTML = "";
-          }, 2500);
+          }, 3000);
         }
       );
   };
